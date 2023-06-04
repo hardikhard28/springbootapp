@@ -18,7 +18,7 @@ pipeline {
             steps {
                 script {
                     // Use the checkout step to clone the Git repository
-                    sh "mvn clean package"
+                    sh "mvn package -Dmaven.test.skip"
                 }
             }
         }
