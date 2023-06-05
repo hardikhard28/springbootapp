@@ -22,6 +22,14 @@ pipeline {
                 }
             }
         }
+        stage('running ') {
+            steps {
+                script {
+                    // Use the checkout step to clone the Git repository
+                    sh "java -jar ./target/spring-boot-hello-world-1.0.0-SNAPSHOT.jar"
+                }
+            }
+        }
 
         
     }
